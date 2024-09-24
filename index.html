@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>I miss you po</title>
+    <link rel="icon" type="image/png" href="images/ph.png">
+</head>
+<body> 
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/X- Small.png" class="Logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Resume</a></li>
+                <li><a href="#">Project</a></li>
+                <li><a href="#">Awards</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p> 1st year College</p>
+            <h1>Hello, I'm <span>Mary Loi</span><br>Ricalde From Philippine</h1>
+        </div>
+    </div>
+</div>
+<!----------About me--------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/ᡣ𐭩ྀིྀི₊ ⊹.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About me</h1>
+                <p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Error laborum earum architecto eum excepturi odio officiis ratione, magni repellat cumque adipisci ab itaque, 
+                    quibusdam ut porro. Corporis velit rem obcaecati?</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('background')">Background</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>                    
+                            <li><span>Soft Skills</span><br>Emotional intelligence,Adaptability</li>
+                            <li><span>Hard Skills</span><br>Programming Language (HTML,CSS and Java)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education"> 
+                        <ul>
+                            <li><span>2019-2020</span><br>Graduate in Junior High School</li>
+                            <li><span>2023-2024</span><br>Graduate in Senior High School in TVL(Technical-Vocational-Livelihood) in Home economic's</li>                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="background"> 
+                        <ul>
+                            <li><span>I Can Bake like:</span><br>Cake, Cupcakes, Cinnamon roll, Cookie's and etc.</li>
+                            <li><span>I Can Cook like:</span><br>Ginatang Kalabasa at Batong, Adobong Baboy, Egg Dish and etc.</li>                            
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab");
+        }
+        
+</script>
+
+</body>
+</html>
